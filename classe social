@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analise de renda</title>
+</head>
+<body>
+<h2>Analise de Renda</h2>
+<input id="valor" type="text" placeholder="Informe sua renda"><br><br>
+<button onclick="clicar()">Analisae renda</button>
+
+<div id="msg"></div>  
+</body>
+</html>
+<script>
+
+function clicar() {
+    var renda = Number(valor.value)
+if (renda <= 250) {
+    msg.innerHTML = `Classe E`
+} else {
+    if (renda <= 900) {
+        msg.innerHTML = `Classe D`
+    } else {
+        if (renda <= 2500) {
+            msg.innerHTML = `Classe C` 
+        } else {
+           if (renda <= 9500) {
+            msg.innerHTML = `Classe B`
+           } else {
+            msg.innerHTML = `Classe A`
+           } 
+        }
+    }
+}
+}
+</script>
