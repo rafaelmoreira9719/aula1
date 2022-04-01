@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Banco</title>
+</head>
+<body>
+    <h1>Qual seu saldo?</h1>
+    <br>
+    <input id="ipt_saldo" type="text" placeholder="informe seu saldo" >
+    <br><br>
+    <button onclick="financa()" >Verificar Finanças</button> <br><br>
+
+    <div id="msg"></div>
+    
+    
+</body>
+</html>
+<script>
+    function financa() {
+        var saldo = Number(ipt_saldo.value); 
+    if (saldo == 0) {
+        msg.innerHTML = 'Conta Zerada'
+    } else {
+        if (saldo > 0) {
+            msg.innerHTML = '<span style="color: blue;">Saldo Positivo</span>'
+        } else {
+            msg.innerHTML = '<span style="color: red;">Esta Devendo</span>'
+        }
+    }
+}
+</script>
