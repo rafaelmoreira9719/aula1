@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mercado</title>
+</head>
+<body>
+    <h2>Calcule o preço da compra:</h2>
+    <input id="valor" type="text" placeholder="Quantidade de chocolates"> <br><br>
+    <button onclick="calcular()">Compra</button><br><br>
+
+    <div id="msg"></div>
+    
+</body>
+</html>
+<script>
+
+function calcular() {
+    var vlr = Number(valor.value);
+if (vlr > 12) {
+    msg.innerHTML = `O valor da sua conta foi de ${vlr * 2.5}`
+} else {
+    msg.innerHTML = `O valor da sua conta foi de ${vlr * 3}`
+}
+}
+</script>
