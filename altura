@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ED.Física</title>
+</head>
+<body>
+    <h2>Qual a sua altura?</h2>
+    <input id="altura" type="text" placeholder="Informe sua altura"><br><br>
+    <button onclick="clicar()">Altura</button>
+    <div id="msg"></div>
+    
+</body>
+</html>
+<script>
+
+function clicar() {
+    var alt = Number(altura.value)
+    if (alt <= 1.65) {
+        msg.innerHTML = `Você pode ser piloto de corrida`
+    } else {
+        if (alt <= 1.8) {
+            msg.innerHTML = `Você pode ser jogador de futebol`
+        } else {
+            msg.innerHTML = `Você pode ser jogador de vôlei ou basquete`
+        }
+    }
+}
+
+</script>
